@@ -28,7 +28,7 @@ LOG_DIR = os.path.join(os.getcwd(), "es_logs")
 LOG_FILE = os.path.join(LOG_DIR, "logging_fallback.log")
 
 if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
+    os.makedirs(LOG_DIR, exist_ok=True)
 
 logging.basicConfig(
     filename=LOG_FILE,
